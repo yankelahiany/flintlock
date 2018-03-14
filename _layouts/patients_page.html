@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<article class="post-content">
+ 
+ <h3 class="mt-0 mb-5"> <span class="h1">{{page.id}} - {{page.first_name}} {{page.last_name}}</span> </h3>
+ 
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 mb-3">
+      <img class="mr-3" src="{{page.avatar}}" width="100%" >
+    </div>
+    <div class="col-md-8 col-sm-12 table-responsive">
+      <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td><a href="mailto:{{page.email}}" target="_top">{{page.email}}</a></td>
+                </tr>
+                <tr>
+                  <th scope="row">Gender</th>
+                  <td>{{page.gender}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Race</th>
+                  <td>{{page.race}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">City</th>
+                  <td>{{page.city}}</td>
+                </tr>
+                 <tr>
+                  <th scope="row">Country</th>
+                  <td>{{page.country}}</td>
+                </tr> 
+                 <tr>
+                  <th scope="row">Phone</th>
+                  <td>{{page.phone}}</td>
+                </tr> 
+                 <tr>
+                  <th scope="row">App</th>
+                  <td>{{page.app}}</td>
+                </tr> 
+                 <tr>
+                  <th scope="row">Drug</th>
+                  <td>{{page.drug}}</td>
+                </tr> 
+                 <tr>
+                  <th scope="row">Proc. Description</th>
+                  <td>{{page.proc}}</td>
+                </tr>
+            </tbody>
+        </table>    
+    </div>
+
+  </div>
+</div>
+       
+<!--
+        <ul>
+            <li><span class="h5">Email:</span> {{page.email}}</li>
+            <li><span class="h5">Gender:</span> {{page.gender}}</li>
+            <li><span class="h5">Race:</span> {{page.race}}</li>
+            <li><span class="h5">City:</span> {{page.city}}</li>
+            <li><span class="h5">Country:</span> {{page.country}}</li>
+            <li><span class="h5">Phone:</span> {{page.phone}}</li>
+            <li><span class="h5">App Name:</span> {{page.app}}</li>
+            <li><span class="h5">Drug:</span> {{page.drug}}</li>
+            <li><span class="h5">Proc. Description:</span> {{page.proc}}</li>
+        </ul>
+--> 
+</article>
