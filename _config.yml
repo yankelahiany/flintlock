@@ -41,7 +41,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://yankel.lahiany.gitlab.io/flintlock/
+url: http://flintlock2.netlify.com
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
@@ -104,5 +104,10 @@ page_gen:
     template: 'patients_page'
     name: 'id'
     dir: 'patients'
+    
+  - data: 'classmates'
+    template: 'classmates_page'
+    name: 'name'
+    dir: 'classmates'
 
 include: [ /_data, /NFC ]
