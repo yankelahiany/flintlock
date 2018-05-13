@@ -1,9 +1,103 @@
 <html>
-   <head> 
-     <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-     <script type="text/javascript"> 
+    <head> 
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"></META>
+
+        <!--<script type="text/javascript"> 
         document.location="bitcoin:3MVZKyYAAMx6MMtG1j6b1vhjDJr5jdo8Lw";
-        <!--window.location="https://coinmarketcap.com/currencies/bitcoin/"; -->
-     </script>
-   </head>
+        <!--window.location="https://coinmarketcap.com/currencies/bitcoin/"; 
+         </script> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/bitcoinaddress-bundle.min.js"></script>
+
+        <script>
+        $(document).ready(function() {
+        bitcoinaddress.init({
+
+            // jQuery selector defining bitcon addresses on the page
+            // needing the boost
+            selector: ".bitcoin-address",
+
+            // Id of the DOM template element we use to decorate the addresses.
+            // This must contain placefolder .bitcoin-address
+            template: "bitcoin-address-template",
+
+            // Passed directly to QRCode.js
+            // https://github.com/davidshimjs/qrcodejs
+            qr : {
+                width: 128,
+                height: 128,
+                colorDark : "#000000",
+                colorLight : "#ffffff"
+            },
+
+            // By default the generated QR code is bitcoin:// URL.
+            // However you might want to change this for altcoins, which do not have
+            // official protocol handlers. Set true to remove bitcoin:// from
+            // QR code.
+            qrRawAddress: false
+        });
+        });
+        </script>
+        
+
+<style>
+html, body {
+    height: 100%;
+}
+</style>
+    </head>
+    <body>
+        <div id="bitcoin-address-template" class="bitcoin-address-container" style="display: none">
+            <div>
+                <span class="bitcoin-address"></span>
+            </div>
+
+            <a href="#" class="bitcoin-address-action bitcoin-address-action-send">
+                <i class="fa fa-btc"></i>
+                Pay from wallet
+            </a>
+
+            <a href="#" class="bitcoin-address-action bitcoin-address-action-copy">
+                <i class="fa fa-copy"></i>
+                Copy
+            </a>
+
+            <a href="#" class="bitcoin-address-action bitcoin-address-action-qr">
+                <i class="fa fa-qrcode"></i>
+                QR code
+            </a>
+
+            <div class="bitcoin-action-hint bitcoin-action-hint-send">
+                Sending payment to the address from locally installed Bitcoin wallet app.
+            </div>
+
+            <div class="bitcoin-action-hint bitcoin-action-hint-copy">
+                Press CTRL + C or &#x2318; + C to copy the Bitcoin address.
+            </div>
+
+            <div class="bitcoin-action-hint bitcoin-action-hint-qr">
+                <p>
+                    Scan the QR code with your mobile Bitcoin app to
+                    make the payment:
+                </p>
+
+                <div class="bitcoin-address-qr-container">
+                    <!-- Filled in by JS on action click -->
+                </div>
+            </div>
+        </div>
+        <div class="container h-100 d-flex justify-content-center">
+    <div class="jumbotron my-auto">
+      <strong class="bitcoin-address" data-bc-address="3MVZKyYAAMx6MMtG1j6b1vhjDJr5jdo8Lwe">3MVZKyYAAMx6MMtG1j6b1vhjDJr5jdo8Lw</strong>
+    </div>
+</div>
+
+    </body>
 </html>
